@@ -92,7 +92,7 @@ function deleteDay(id, days) {
 
 //4. Создать функцию, которая будет сортировать список погоды по температуре с указанным порядком
 
-function sortByTemp(sortType, days) {
+function sortByTemprature(sortType, days) {
     if (sortType === 'asc') {
         days.sort((prev, next) => prev.temperature - next.temperature);
     } else {
@@ -100,15 +100,15 @@ function sortByTemp(sortType, days) {
     }
 }
 
-sortByTemp('desс', days);
+sortByTemprature('desс', days);
 
 //5. Создать функцию, которая будет вощвращать копию списка , которая содержит погоду только по выходным или рабочим дням
 
-function weekdays(days) {
+function getWeekdays(days) {
     return days.filter(item => (item.dayName !== 'Saturday' && item.dayName !== 'Sunday'));
 }
 
-function weekends(days) {
+function getWeekends(days) {
     return days.filter(item => (item.dayName === 'Saturday' || item.dayName === 'Sunday'));
 }
 
